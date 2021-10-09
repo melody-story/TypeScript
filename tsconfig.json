@@ -1,0 +1,27 @@
+// Typescript를 어떤 버전의 JavaScript로 컨파일되고 싶은지를 알려줌
+// source map 처리를 하고 싶은지 알려줌.
+
+//include : 어떤 파일들이 컴파일 과정에 포함되는지 Typescrip에게 알려줌. 포함할 파일의 배열을 적으면 됨.
+// index.ts파일을 생성하고 include에 추가해줌 
+// {
+//     "compilerOptions": {
+//         "module": "commonjs",
+//         "target": "ES2015",
+//         "sourceMap": true    
+//     },
+//     "include": ["index.ts"],    
+//     "exclude": ["node_modules"]
+// }
+
+
+//src안의 모든 파일을 컴파일 한다는 뜻
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES2015",
+        "sourceMap": true,
+        "outDir": "dist"    
+    },
+    "include": ["src/**/*"],    
+    "exclude": ["node_modules"]
+}
